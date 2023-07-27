@@ -196,7 +196,7 @@ const Home = () => {
 
                 <Box px={5} pt={2} pb={5} bg="white" mt={-20} zIndex="2">
                   I am a hobbyist photographer 📷 and an experimental interface
-                  designer✨.<br/> Tech Stack: Next.js | Typescript | Node.js | GraphQL | Figma 
+                  designer✨.<br/> Tech Stack: Next.js | Typescript | GraphQL | Figma 
                 </Box>
               </Flex>
             </Flex>
