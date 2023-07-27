@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/zoom": "^3.12.0",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "blobity": "^0.2.3",
+    "framer-motion": "^10.13.1",
+    "gsap": "^3.12.2",
+    "next": "13.4.12",
+    "pdfjs-dist": "^3.8.162",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-fast-marquee": "^1.6.0",
+    "react-icons": "^4.10.1",
+    "react-topbar-progress-indicator": "^4.1.1",
+    "scroller-motion": "^1.2.3",
+    "typescript": "5.1.6"
+  }
+}
