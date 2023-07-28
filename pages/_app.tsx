@@ -6,6 +6,77 @@ import Head from "next/head";
 import theme from "../themes";
 import Router, { useRouter } from "next/router";
 import TopBarProgress from "react-topbar-progress-indicator"
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Johnmicheal Elijah — Frontend Engineer",
+    description:
+      "Frontend Engineer and Interface Designer. Focused on building web and mobile software interface, working remotely from Lagos, Nigeria.",
+    generator: "Next.js",
+    applicationName: "Johnmicheal Elijah",
+    keywords: [
+      "freelance",  
+      "developer",
+      "freelance developer",
+      "frontend",
+      "react",
+      "frontend developer",
+      "frontend engineer",
+      "creative",
+      "creative developer",
+      "creative engineer",
+      "tech",
+      "nigeria",
+      "software",
+      "software developer",
+      "portfolio",
+      "frontend developer portfolio",
+      "creative developer portfolio",
+    ],
+    colorScheme: "light",
+    openGraph: {
+      title: "Johnmicheal Elijah — Frontend Engineer",
+      description:
+        "Frontend Engineer and Interface Designer. Focused on building web and mobile software interface, working remotely from Lagos, Nigeria.",
+      url: "https://www.johnmicheal.vercel.app/",
+      siteName: "www.johnmiicheal.vercel.app",
+      images: [
+        {
+          url: "/website.png",
+          width: 1200,
+          height: 630,
+          alt: "Johnmicheal Elijah — Frontend Engineer",
+        },
+      ],
+      locale: "en-US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Johnmicheal Elijah — Frontend Engineer",
+      description:
+        "Frontend Engineer and Interface Designer. Focused on building web and mobile software interface, working remotely from Lagos, Nigeria.",
+      creator: "johnmiiiicheal",
+      images: [
+        "",
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: false,
+        noimageindex: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    category: "technology",
+  };
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [progress, setProgress] = React.useState(false)
