@@ -151,7 +151,7 @@ const Home = () => {
                     <Link
                       href={link.path}
                       color={color}
-                      _hover={{ color: color }}
+                      _hover={{ color: text }}
                       target="_blank"
                     >
                       {link.text}
