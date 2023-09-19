@@ -35,7 +35,7 @@ export const PDFViewer = ({ isOpen, onClose, path }: any) => {
                 </Flex>
                 <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.8.162/build/pdf.worker.min.js">
                     <Viewer
-                    fileUrl="/01_Johnmicheal_Elijah_2023[Main].pdf"
+                    fileUrl="/01_Johnmicheal_Elijah_Resume[Main].pdf"
                     onZoom={handleZoom}
                     plugins={[zoomPluginInstance]}
                     />
