@@ -17,7 +17,6 @@ import { RxArrowRight } from "react-icons/rx";
 import Marquee from "react-fast-marquee";
 import { useRouter } from "next/router";
 import { PDFViewer } from "../src/components/PDFViewer";
-import { ScrollerMotion } from "scroller-motion";
 import { initialBlobityOptions } from "../src/utils/blobConfig";
 import useBlobity from "blobity/lib/react/useBlobity";
 import { motion } from "framer-motion";
@@ -85,7 +84,6 @@ const Home = () => {
 
   const router = useRouter();
   return (
-    <ScrollerMotion>
       <Center bg={bg}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -308,7 +306,6 @@ const Home = () => {
           <PDFViewer isOpen={isFileOpen} onClose={onFileClose} />
         </motion.div>
       </Center>
-    </ScrollerMotion>
   );
 };
 
