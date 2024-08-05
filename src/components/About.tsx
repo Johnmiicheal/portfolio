@@ -53,13 +53,13 @@ export const About = () => {
       icon: RiTwitterXFill,
     },
     {
-      path:  () => window.open("https://linkedin.com/in/johnmiicheal"),
-      text: "Linkedin",
-      icon: RiGithubFill,
+        path:  () => window.open("https://github.com/johnmiicheal"),
+        text: "Github",
+        icon: RiGithubFill,
     },
     {
-      path:  () => window.open("https://github.com/johnmiicheal"),
-      text: "Github",
+      path:  () => window.open("https://linkedin.com/in/johnmiicheal"),
+      text: "Linkedin",
       icon: RiLinkedinBoxFill,
     },
     {
