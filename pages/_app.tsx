@@ -7,6 +7,8 @@ import theme from "../themes";
 import Router, { useRouter } from "next/router";
 import TopBarProgress from "react-topbar-progress-indicator"
 import { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 
 export const metadata: Metadata = {
@@ -113,6 +115,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   } else {
     return (
       <ThemeProvider theme={theme}>
+        
         <Head>
           <link rel="shortcut icon" href="/assets/favicon.svg" />
           <title>Johnmicheal Elijah - Portfolio Website</title>
@@ -120,6 +123,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <ChakraProvider theme={theme}>
             {progress && <TopBarProgress />}
           <Component {...pageProps} />
+          <Analytics />
+          <SpeedInsights />
         </ChakraProvider>
         
         </ThemeProvider>
