@@ -10,11 +10,11 @@ export const initialBlobityOptions = {
   font: "'Montserrat','Source Sans Pro',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif",
   fontSize: 16,
   fontWeight: 500,
-  borderRadius: "50px",
+  borderRadius: "100px",
   opacity: 1,
   fontColor: "#BCBCBC",
   zIndex: 100,
   size: 40,
-  radius: 4,
+  radius: 25,
   magnetic: true,
 };

@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       title: "Johnmicheal Elijah — Frontend Engineer",
       description:
         "Frontend Engineer and Interface Designer. Focused on building web and mobile software interface, working remotely from Lagos, Nigeria.",
-      url: "https://www.johnmicheal.vercel.app/",
-      siteName: "www.johnmiicheal.vercel.app",
+      url: "https://johnmicheal.vercel.app/",
+      siteName: "johnmiicheal.vercel.app",
       images: [
         {
           url: "/website.png",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         "Frontend Engineer and Interface Designer. Focused on building web and mobile software interface, working remotely from Lagos, Nigeria.",
       creator: "johnmiiiicheal",
       images: [
-        "",
+        "/images/jmm.png",
       ],
     },
     robots: {
@@ -93,6 +93,18 @@ function MyApp({ Component, pageProps }: AppProps) {
     setShowChild(true);
   }, []);
 
+  const message = `
+  %cWebsite designed by Johnmiicheal\n
+   #####    #####   ######    ######  ######   ##  ##   ##  ##   
+  #######  #######  #######  #######  #######  ### ##   ## ##    
+  ##   ##  ##   ##       ##  ##            ##  ######   ####     
+  ##       ##   ##  ##   ##  #######  ######   ######   ####     
+  ##   ##  ##   ##  ##   ##  ##       ##       ## ###   ## ##    
+  #######  #######  #######  #######  ##       ##  ##   ##  ##   
+   #####    #####   ######    ######  ##       ##  ##   ##   ## 
+  `
+  console.log(message, "color: pink;");
+
   if (!showChild) {
     return null;
   }
@@ -102,10 +114,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
       <ThemeProvider theme={theme}>
         <Head>
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <title>Johnmicheal's Portfolio</title>
+          <link rel="shortcut icon" href="/assets/favicon.svg" />
+          <title>Johnmicheal Elijah - Portfolio Website</title>
         </Head>
-          <ChakraProvider>
+          <ChakraProvider theme={theme}>
             {progress && <TopBarProgress />}
           <Component {...pageProps} />
         </ChakraProvider>
