@@ -15,6 +15,18 @@ import { motion } from "framer-motion";
 export const Projects = () => {
   const projects = [
     {
+      img: "/images/work/udcwork.png",
+      title: "Untitled Designers Conference 2024",
+      caption: "Event Day Designs and AR Filters for a design conference",
+      // path: "https://lecturemate.org",
+    },
+    {
+      img: "/images/work/stugnwork.png",
+      title: "Greynote Students",
+      caption: "Design and Illustrations for Greynote Student Web Application",
+      // path: "https://lecturemate.org",
+    },
+    {
       img: "/images/work/lmwork.png",
       title: "Lecture Mate AI",
       caption: "GPT Chatbot for Exam Preparation",
