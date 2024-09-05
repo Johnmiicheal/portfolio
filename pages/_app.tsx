@@ -9,6 +9,7 @@ import TopBarProgress from "react-topbar-progress-indicator"
 import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -120,6 +121,22 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="shortcut icon" href="/assets/favicon.svg" />
           <title>Johnmicheal Elijah - Portfolio Website</title>
         </Head>
+        <Script
+        id="hotjar-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:5124954,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+        }}
+      />
           <ChakraProvider theme={theme}>
             {progress && <TopBarProgress />}
           <Component {...pageProps} />
