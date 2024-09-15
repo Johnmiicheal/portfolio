@@ -150,7 +150,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           }}
         />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-W24Y0J746V" />
-"
         <ChakraProvider theme={theme}>
           {progress && <TopBarProgress />}
           <Component {...pageProps} />
