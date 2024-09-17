@@ -14,46 +14,6 @@ import { About } from "../src/components/About";
 import { Projects } from "../src/components/Projects";
 
 const Home = () => {
-  const images = [
-    "/greybox.jpg",
-    "/lm7.jpg",
-    "/qps.jpg",
-    "/swiss.jpg",
-    "/zcamp.jpg",
-  ];
-
-  const works = [
-    {
-      path: "https://greynote.app",
-      image: "/greymood.png",
-      text: "Greynote - Client Dashboard",
-    },
-    {
-      path: "https://github.com/QuasarPay",
-      image: "/quasar.png",
-      text: "Quasar Payment System",
-    },
-    {
-      path: "https://lecturemate.vercel.app",
-      image: "/lm.png",
-      text: "Lecture Mate AI",
-    },
-    {
-      path: "https://github.com/zcamp-inc",
-      image: "/zcamp.png",
-      text: "The ZCAMP Network",
-    },
-  ];
-
-  const blobityInstance = useBlobity(initialBlobityOptions);
-
-  useEffect(() => {
-    if (blobityInstance.current) {
-      // @ts-ignore for debugging purposes or playing around
-      window.blobity = blobityInstance.current;
-    }
-  }, [blobityInstance]);
-
   const { colorMode, toggleColorMode } = useColorMode();
   const color = useColorModeValue("blackAlpha.400", "gray.500");
   const text = useColorModeValue("blackAlpha.800", "gray.300");
