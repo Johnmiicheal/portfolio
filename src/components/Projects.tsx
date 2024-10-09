@@ -18,7 +18,7 @@ export const Projects = () => {
       img: "/images/work/udcwork.png",
       title: "Untitled Designers Conference 2024",
       caption: "Event Day Designs and AR Filters for a design conference",
-      // path: "https://lecturemate.org",
+      path: "https://x.com/untitledsgnrs",
     },
     {
       img: "/images/work/stugnwork.png",
@@ -30,7 +30,7 @@ export const Projects = () => {
       img: "/images/work/lmwork.png",
       title: "Lecture Mate AI",
       caption: "GPT Chatbot for Exam Preparation",
-      path: "https://lecturemate.org",
+      path: "https://github.com/johnmiicheal/lecturemate",
     },
     {
       img: "/images/work/chiwork.png",
