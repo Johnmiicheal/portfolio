@@ -15,6 +15,18 @@ import { motion } from "framer-motion";
 export const Projects = () => {
   const projects = [
     {
+      img: "/images/work/ojami.gif",
+      title: "Ojà mi",
+      caption: "Digital marketplace powered by Kora",
+      path: "https://www.youtube.com/watch?v=HhOyK0ckJGU",
+    },
+    {
+      img: "/images/work/hectrework.png",
+      title: "The Hectre",
+      caption: "Product designs for a property tech startup",
+      path: "https://thehectre.com",
+    },
+    {
       img: "/images/work/udcwork.png",
       title: "Untitled Designers Conference 2024",
       caption: "Event Day Designs and AR Filters for a design conference",
@@ -24,7 +36,7 @@ export const Projects = () => {
       img: "/images/work/stugnwork.png",
       title: "Greynote Students",
       caption: "Design and Illustrations for Greynote Student Web Application",
-      // path: "https://lecturemate.org",
+      path: "https://greynote.app",
     },
     {
       img: "/images/work/lmwork.png",
@@ -101,41 +113,28 @@ export const Projects = () => {
                 w="full"
                 transition="transform 0.8s ease"
                 pointerEvents={"none"}
+                border="1px solid #e2e2e2"
               />
             </CardBody>
           </Card>
         ))}
       </SimpleGrid>
-      <Box w="full" border="1px solid #e2e2e2" overflow="hidden" rounded="20px">
-        <Flex
-          w="full"
-          justify="space-between"
-          bg="white"
-          py={5}
-          px={[2, 3, 10]}
-          direction={{ base: "column", md: "row"}}
-          gap={2}
-          align="center"
-        >
-          <Flex align="center" gap={8} w="full" direction={{ base: "column", md: "row"}}>
-            <Image src="/assets/desk.svg" w="50px" pointerEvents={"none"} />
-            <Text fontWeight={400} fontSize={26}>
-              Wanna build cool stuff?
-            </Text>
-          </Flex>
-          <Box>
+      <Box w="full" border="1px solid #e2e2e2" bg="white" overflow="hidden" rounded="20px">
+        <Flex p={5} justify="space-between" align="center" w="full">
+          <Text color="#747474">Let's build something cool, together</Text>
+        <Box>
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <Button
                 w="fit-content"
                 bg="#f0f0f0"
-                boxShadow={"5px 3px 4px #e2e2e2"}
+                border="1px solid #e2e2e2"
+                _hover={{ bg: "#e2e2e2"}}
                 fontWeight={300}
-                py={8}
+                py={5}
                 rounded="20px"
-                data-no-blobity
                 onClick={() =>
                   window.open(
                     "mailto:michealelijah301@gmail.com?subject:Lets build something cool"
@@ -147,16 +146,38 @@ export const Projects = () => {
             </motion.button>
           </Box>
         </Flex>
-        <Flex
-          bg="#e2e2e2"
-          p={1}
-          color="#747474"
-          fontSize={14}
-          justify="center"
-          w="full"
-          bgGradient="linear(to-r, #DB00D4, #FDCD52, #00FFF0)"
-        ></Flex>
       </Box>
+      <Image src={"/assets/jm-svg.svg"} alt="johnmiicheal" opacity={0.2} className="test" sx={{ animation: 'squiggly-anim 0.34s linear infinite',}} />
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'none' }}>
+                <defs>
+                    {Array.from({ length: 5 }, (_, i) => (
+                        <filter key={`squiggly-${i}`} id={`squiggly-${i}`}>
+                            <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed={i} />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale={i % 2 === 0 ? 6 : 8} />
+                        </filter>
+                    ))}
+                </defs>
+            </svg>
+
+            <style jsx>{`
+                @keyframes squiggly-anim {
+                    0% {
+                        filter: url('#squiggly-0');
+                    }
+                    25% {
+                        filter: url('#squiggly-1');
+                    }
+                    50% {
+                        filter: url('#squiggly-2');
+                    }
+                    75% {
+                        filter: url('#squiggly-3');
+                    }
+                    100% {
+                        filter: url('#squiggly-4');
+                    }
+                }
+            `}</style>        
     </Flex>
   );
 };

@@ -11,7 +11,37 @@ export const Loading = () => {
     >
       <Center bg="#FAF4E9" h="100vh">
         <Flex direction="column">
-          <Image src={"/assets/jm-svg.svg"} alt="johnmiicheal" />
+          <Image src={"/assets/jm-svg.svg"} alt="johnmiicheal" className="test" sx={{ animation: 'squiggly-anim 0.34s linear infinite',}} />
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'none' }}>
+                <defs>
+                    {Array.from({ length: 5 }, (_, i) => (
+                        <filter key={`squiggly-${i}`} id={`squiggly-${i}`}>
+                            <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed={i} />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale={i % 2 === 0 ? 6 : 8} />
+                        </filter>
+                    ))}
+                </defs>
+            </svg>
+
+            <style jsx>{`
+                @keyframes squiggly-anim {
+                    0% {
+                        filter: url('#squiggly-0');
+                    }
+                    25% {
+                        filter: url('#squiggly-1');
+                    }
+                    50% {
+                        filter: url('#squiggly-2');
+                    }
+                    75% {
+                        filter: url('#squiggly-3');
+                    }
+                    100% {
+                        filter: url('#squiggly-4');
+                    }
+                }
+            `}</style>
           <Flex gap={-1} overflow="hidden">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
