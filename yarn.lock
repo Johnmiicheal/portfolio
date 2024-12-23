@@ -1821,6 +1821,11 @@ react-fast-compare@3.2.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.1.tgz#53933d9e14f364281d6cba24bfed7a4afb808b5f"
   integrity sha512-xTYf9zFim2pEif/Fw16dBiXpe0hoy5PxcD8+OwBnTtNLfIm3g6WxhKNurY+6OmdH1u6Ta/W/Vl6vjbYP1MFnDg==
 
+react-fast-compare@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.2.tgz#929a97a532304ce9fee4bcae44234f1ce2c21d49"
+  integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
+
 react-fast-marquee@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/react-fast-marquee/-/react-fast-marquee-1.6.0.tgz#3749a9d0f522234e1e3ab776f105cd0accd76a4a"
@@ -1866,6 +1871,13 @@ react-remove-scroll@^2.5.5:
     tslib "^2.1.0"
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
+
+react-snowfall@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-snowfall/-/react-snowfall-2.2.0.tgz#0856a72c4d29d27a6a14301c0f5deb51296fb4df"
+  integrity sha512-dRk7vEHq/ZUOG+JHk2k/hH3HmliOWGXr4rKRDeW4mjWuHeI1r5h0Lc1r2jnTtUS1im702d6tCmNGymlNTdhXYg==
+  dependencies:
+    react-fast-compare "^3.2.2"
 
 react-style-singleton@^2.2.1:
   version "2.2.1"

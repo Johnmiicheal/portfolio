@@ -1,14 +1,18 @@
-import { Flex, Box, Image, Stack } from "@chakra-ui/react";
+import { Flex, Box, Image, Stack, useColorModeValue } from "@chakra-ui/react";
 import { color } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 interface ImageMarqueeProps {
   images: string[];
+  bgColor: string;
+  border: string;
+  color: string;
 }
-export const ImageMarquee: React.FC<ImageMarqueeProps> = ({ images }) => {
+export const ImageMarquee: React.FC<ImageMarqueeProps> = ({ images, bgColor, border, color }) => {
   const [topRotateValues, setTopRotateValues] = useState<number[]>([]);
   const [btmRotateValues, setBtmRotateValues] = useState<number[]>([]);
+  const bgWhite = useColorModeValue("white", "gray.800");
 
   useEffect(() => {
     // Generate random rotation values between -10 and 10 degrees for each image
@@ -20,11 +24,11 @@ export const ImageMarquee: React.FC<ImageMarqueeProps> = ({ images }) => {
 
   return (
     <Stack
-      border="1px solid"
-      borderColor={"#e2e2e2"}
+      border={border}
       borderRadius="20px"
       w={{ lg: "full" }}
       overflow="hidden"
+      bg={bgColor}
     >
       <Flex mt={-8} zIndex={2}>
         <Marquee speed={20}>
@@ -64,7 +68,7 @@ export const ImageMarquee: React.FC<ImageMarqueeProps> = ({ images }) => {
         </Marquee>
       </Flex>
 
-      <Box borderTop={"1px solid #e2e2e2"} mt={-10} h="3em" px={5} pt={2} pb={5} bg={"white"} zIndex="2"></Box>
+      <Box borderTop={border} mt={-10} h="3em" px={5} pt={2} pb={5} bg={bgWhite} zIndex="2"></Box>
     </Stack>
   );
 };

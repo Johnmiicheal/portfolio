@@ -8,6 +8,7 @@ import {
   Box,
   IconButton,
   useDisclosure,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ImageMarquee } from "./Fancy/ImageMarquee";
 import {
@@ -31,7 +32,13 @@ import {
 import { VscFilePdf } from "react-icons/vsc";
 import { PDFViewer } from "./PDFViewer";
 
-export const About = () => {
+interface AboutProps {
+  bgColor: string;
+  border: string;
+  color: string;
+}
+export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
+  const bgWhite = useColorModeValue("white", "gray.800");
     const {
         isOpen: isFileOpen,
         onOpen: onFileOpen,
@@ -68,6 +75,7 @@ export const About = () => {
       icon: RiBehanceFill,
     },
   ];
+
   const [show, setShow] = useState(false);
   const [mine, setMine] = useState<number | null | undefined>(null);
   const bg = ["teal.500", "#000", "gray.500", "linkedin.500", "blue.700"];
@@ -89,10 +97,10 @@ export const About = () => {
         <Flex
           w="full"
           direction="column"
-          border="1px solid #e2e2e2"
+          border={border}
           rounded="20px"
           p={2}
-          bg="white"
+          bg={bgColor}
           _hover={{ "& .img": { transform: "rotate(1deg)" } }}
         >
           <Image
@@ -132,7 +140,7 @@ export const About = () => {
         align="center"
         w="full"
       >
-        <ImageMarquee images={images} />
+        <ImageMarquee images={images} bgColor={bgColor} color={color} border={border} />
         <Stack w={["full", 'full', "500px"]}>
           <Flex
             px={3}
@@ -141,11 +149,11 @@ export const About = () => {
             direction="column"
             w="full"
             bgImg="/images/currXP-L.png"
-            bgColor="white"
+            bgColor={bgColor}
             bgSize="contain"
             bgRepeat="no-repeat"
             bgPos="right"
-            border="1px solid #e2e2e2"
+            border={border}
             rounded="20px"
           >
             <Text fontSize={12}>Current Role</Text>
@@ -161,11 +169,11 @@ export const About = () => {
                 onClick={item.path}
                 p={5}
                 h="60px"
-                bg="white"
+                bg={bgWhite}
                 fontSize={26}
                 _hover={{ bg: bg[index], color: "white" }}
                 rounded="20px"
-                border="1px solid #e2e2e2"
+                border={border}
                 color="#BBB"
                 key={index}
                 transition="1.2s ease"
@@ -179,11 +187,11 @@ export const About = () => {
             direction="column"
             w="full"
             bgImg="/images/currIP-L.png"
-            bgColor="white"
+            bgColor={bgColor}
             bgSize="contain"
             bgRepeat="no-repeat"
             bgPos="right"
-            border="1px solid #e2e2e2"
+            border={border}
             rounded="20px"
           >
             <Text fontSize={12}>Based in</Text>
@@ -193,9 +201,9 @@ export const About = () => {
           </Flex>
         </Stack>
       </Flex>
-      <Box w="full" border="1px solid #e2e2e2" overflow="hidden" rounded="20px">
+      <Box w="full" border={border} overflow="hidden" rounded="20px">
         <Flex
-          bg="#e2e2e2"
+          bg={bgColor}
           p={1}
           color="#747474"
           fontSize={14}
@@ -204,7 +212,7 @@ export const About = () => {
         >
           Languages - Frameworks - Tools
         </Flex>
-        <Flex w="full" justify="space-between" bg="white" py={5} px={[2, 3, 14]}>
+        <Flex w="full" justify="space-between" bg={bgWhite} py={5} px={[2, 3, 14]}>
           {powers.map((item, index) => (
             <Flex key={index} direction="column" align="center" gap={3}
             _hover={{
@@ -225,7 +233,7 @@ export const About = () => {
                 w={2}
                 mt={1}
                 rounded="full"
-                bg="#e2e2e2"
+                bg={bgColor}
                 transition="box-shadow 0.3s ease-in-out, background 0.3s ease-in-out"
 
               />
@@ -237,7 +245,7 @@ export const About = () => {
                 direction="column"
                 w={["30px", "40px", "60px"]}
                 h={["30px", "40px", "60px"]}
-                bg="#e2e2e2"
+                bg={bgColor}
                 rounded="10px"
                 transition="transform 0.5s ease-in-out"
                 transformOrigin="center" 

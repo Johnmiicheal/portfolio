@@ -9,16 +9,25 @@ import {
   Image,
   Text,
   Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-export const Projects = () => {
+interface ProjectPageProps {
+  bgColor: string;
+  border: string;
+  color: string;
+}
+
+export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color }) => {
+  const bgWhite = useColorModeValue("white", "gray.800");
+
   const projects = [
     {
       img: "/images/work/ojami.gif",
       title: "Ojà mi",
-      caption: "Digital marketplace powered by Kora",
-      path: "https://www.youtube.com/watch?v=HhOyK0ckJGU",
+      caption: "Digital marketplace powered by Kora Payments",
+      path: "https://github.com/johnmiicheal/ojami",
     },
     {
       img: "/images/work/hectrework.png",
@@ -33,15 +42,15 @@ export const Projects = () => {
       path: "https://x.com/untitledsgnrs",
     },
     {
-      img: "/images/work/stugnwork.png",
-      title: "Greynote Students",
-      caption: "Design and Illustrations for Greynote Student Web Application",
-      path: "https://greynote.app",
+      img: "/images/work/greysswork.png",
+      title: "Greynote Studio",
+      caption: "Comprehensive dashboard for Content Creators and Tutors",
+      path: "https://www.youtube.com/@GreynoteLimited/videos",
     },
     {
       img: "/images/work/lmwork.png",
       title: "Lecture Mate AI",
-      caption: "GPT Chatbot for Exam Preparation",
+      caption: "Exam Prep and Study AI Buddy for Students",
       path: "https://github.com/johnmiicheal/lecturemate",
     },
     {
@@ -51,7 +60,7 @@ export const Projects = () => {
       path: "https://chiprime.vercel.app",
     },
     {
-      img: "/images/work/gnwork.png",
+      img: "/images/work/greywork-sm.png",
       title: "The Greynote Project",
       caption: "The everything portal for K-12 education",
       path: "https://greynote.app",
@@ -89,7 +98,8 @@ export const Projects = () => {
           <Card
             key={index}
             rounded={"20px"}
-            border="1px solid #e2e2e2"
+            border={border}
+            bg={bgWhite}
             boxShadow="none"
             cursor="pointer"
             _hover={{ "& img": { transform: "rotate(-2deg)" } }}
@@ -113,13 +123,13 @@ export const Projects = () => {
                 w="full"
                 transition="transform 0.8s ease"
                 pointerEvents={"none"}
-                border="1px solid #e2e2e2"
+                border={border}
               />
             </CardBody>
           </Card>
         ))}
       </SimpleGrid>
-      <Box w="full" border="1px solid #e2e2e2" bg="white" overflow="hidden" rounded="20px">
+      <Box w="full" border={border} bg={bgWhite} overflow="hidden" rounded="20px">
         <Flex p={5} justify="space-between" align="center" w="full">
           <Text color="#747474">Let's build something cool, together</Text>
         <Box>
@@ -129,9 +139,10 @@ export const Projects = () => {
             >
               <Button
                 w="fit-content"
-                bg="#f0f0f0"
-                border="1px solid #e2e2e2"
-                _hover={{ bg: "#e2e2e2"}}
+                color={color}
+                bg={bgColor}
+                border={border}
+                _hover={{ bg: "gray.800"}}
                 fontWeight={300}
                 py={5}
                 rounded="20px"
@@ -146,38 +157,7 @@ export const Projects = () => {
             </motion.button>
           </Box>
         </Flex>
-      </Box>
-      <Image src={"/assets/jm-svg.svg"} alt="johnmiicheal" opacity={0.2} className="test" sx={{ animation: 'squiggly-anim 0.34s linear infinite',}} />
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'none' }}>
-                <defs>
-                    {Array.from({ length: 5 }, (_, i) => (
-                        <filter key={`squiggly-${i}`} id={`squiggly-${i}`}>
-                            <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed={i} />
-                            <feDisplacementMap in="SourceGraphic" in2="noise" scale={i % 2 === 0 ? 6 : 8} />
-                        </filter>
-                    ))}
-                </defs>
-            </svg>
-
-            <style jsx>{`
-                @keyframes squiggly-anim {
-                    0% {
-                        filter: url('#squiggly-0');
-                    }
-                    25% {
-                        filter: url('#squiggly-1');
-                    }
-                    50% {
-                        filter: url('#squiggly-2');
-                    }
-                    75% {
-                        filter: url('#squiggly-3');
-                    }
-                    100% {
-                        filter: url('#squiggly-4');
-                    }
-                }
-            `}</style>        
+      </Box> 
     </Flex>
   );
 };
