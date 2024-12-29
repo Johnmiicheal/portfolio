@@ -12,7 +12,7 @@ interface ImageMarqueeProps {
 export const ImageMarquee: React.FC<ImageMarqueeProps> = ({ images, bgColor, border, color }) => {
   const [topRotateValues, setTopRotateValues] = useState<number[]>([]);
   const [btmRotateValues, setBtmRotateValues] = useState<number[]>([]);
-  const bgWhite = useColorModeValue("white", "gray.800");
+  const bgWhite = "#fff";
 
   useEffect(() => {
     // Generate random rotation values between -10 and 10 degrees for each image

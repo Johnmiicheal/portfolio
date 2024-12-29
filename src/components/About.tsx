@@ -38,7 +38,8 @@ interface AboutProps {
   color: string;
 }
 export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
-  const bgWhite = useColorModeValue("white", "gray.800");
+  const bgWhite = "#fff"
+
     const {
         isOpen: isFileOpen,
         onOpen: onFileOpen,
@@ -100,7 +101,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
           border={border}
           rounded="20px"
           p={2}
-          bg={bgColor}
+          bg={'white'}
           _hover={{ "& .img": { transform: "rotate(1deg)" } }}
         >
           <Image
@@ -140,7 +141,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
         align="center"
         w="full"
       >
-        <ImageMarquee images={images} bgColor={bgColor} color={color} border={border} />
+        <ImageMarquee images={images} bgColor="white" color={color} border={border} />
         <Stack w={["full", 'full', "500px"]}>
           <Flex
             px={3}
@@ -149,7 +150,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
             direction="column"
             w="full"
             bgImg="/images/currXP-L.png"
-            bgColor={bgColor}
+            bgColor="white"
             bgSize="contain"
             bgRepeat="no-repeat"
             bgPos="right"
@@ -187,7 +188,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
             direction="column"
             w="full"
             bgImg="/images/currIP-L.png"
-            bgColor={bgColor}
+            bgColor="white"
             bgSize="contain"
             bgRepeat="no-repeat"
             bgPos="right"
@@ -203,7 +204,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
       </Flex>
       <Box w="full" border={border} overflow="hidden" rounded="20px">
         <Flex
-          bg={bgColor}
+          bg="#e2e2e2"
           p={1}
           color="#747474"
           fontSize={14}
@@ -233,7 +234,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
                 w={2}
                 mt={1}
                 rounded="full"
-                bg={bgColor}
+                bg="#e2e2e2"
                 transition="box-shadow 0.3s ease-in-out, background 0.3s ease-in-out"
 
               />
@@ -245,7 +246,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
                 direction="column"
                 w={["30px", "40px", "60px"]}
                 h={["30px", "40px", "60px"]}
-                bg={bgColor}
+                bg="#e2e2e2"
                 rounded="10px"
                 transition="transform 0.5s ease-in-out"
                 transformOrigin="center" 

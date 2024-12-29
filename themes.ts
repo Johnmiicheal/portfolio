@@ -19,7 +19,7 @@ import "@fontsource/rubik/900-italic.css";
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
-  initialColorMode: "dark",
+  initialColorMode: "light",
   useSystemColorMode: false,
 };
 

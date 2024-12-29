@@ -15,18 +15,10 @@ import { Projects } from "../src/components/Projects";
 import Snowfall from "react-snowfall";
 
 const Home = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  useEffect(() => {
-    if (colorMode === "light") {
-      toggleColorMode();
-    }
-  }, [colorMode, toggleColorMode]);
+
   const color = useColorModeValue("blackAlpha.400", "gray.500");
-  const text = useColorModeValue("blackAlpha.800", "gray.300");
-  const bg = useColorModeValue("#f9f9f9", "gray.900");
-  const bgColor = useColorModeValue("#f9f9f9", "gray.900");
+  const bgColor = useColorModeValue("#f2f2f2", "gray.900");
   const border = useColorModeValue("1px solid #e2e2e2", "1px solid #333");
-  const frame = useColorModeValue("/frame.png", "/white.png");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -46,10 +38,10 @@ const Home = () => {
         transition={{ duration: 2, delay: 6.5 }}
       >
         <Center
-          bg={bg}
+          bg={'#f2f2f2'}
           bgSize="cover"
           bgPos="center"
-          // bgImg="/bg.png"
+          bgImg="/bg.png"
           minH="100vh"
         >
           <Flex

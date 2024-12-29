@@ -121,35 +121,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="shortcut icon" href="/assets/favicon.svg" />
           <title>Johnmicheal Elijah - Portfolio Website</title>
         </Head>
-        <Script
-          id="hotjar-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:5124954,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-          }}
-        />
-        <Script
-          id="google-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-W24Y0J746V');
-          `,
-          }}
-        />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-W24Y0J746V" />
         <ChakraProvider theme={theme}>
           {progress && <TopBarProgress />}
           <Component {...pageProps} />

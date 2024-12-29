@@ -20,7 +20,7 @@ interface ProjectPageProps {
 }
 
 export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color }) => {
-  const bgWhite = useColorModeValue("white", "gray.800");
+  const bgWhite = "#fff"
 
   const projects = [
     {
@@ -139,10 +139,10 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
             >
               <Button
                 w="fit-content"
-                color={color}
+                color={"#747474"}
                 bg={bgColor}
                 border={border}
-                _hover={{ bg: "gray.800"}}
+                _hover={{ bg: "#e2e2e2"}}
                 fontWeight={300}
                 py={5}
                 rounded="20px"
