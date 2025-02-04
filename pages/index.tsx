@@ -30,7 +30,7 @@ const Home = () => {
   const router = useRouter();
   return (
     <AnimatePresence>
-      <Snowfall />
+      <Snowfall color="#00000020" />
       <AnimatePresence>{isLoading && <Loading />}</AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
@@ -41,7 +41,9 @@ const Home = () => {
           bg={'#f2f2f2'}
           bgSize="cover"
           bgPos="center"
-          bgImg="/bg.png"
+          bgImg="/sakura-bg-2.png"
+          bgRepeat={"no-repeat"}
+          bgAttachment={"fixed"}
           minH="100vh"
         >
           <Flex

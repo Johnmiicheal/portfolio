@@ -24,16 +24,22 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
 
   const projects = [
     {
+      img: "/images/work/nestwork.png",
+      title: "Nest App",
+      caption: "Find roommates and apartments, create new memories",
+      path: "https://github.com/johnmiicheal/nest",
+    },
+    {
+      img: "/images/work/langwork.png",
+      title: "Lang Games",
+      caption: "2D Illustration + Animations",
+      path: "https://langgames.vercel.app",
+    },
+    {
       img: "/images/work/ojami.gif",
       title: "Ojà mi",
       caption: "Digital marketplace powered by Kora Payments",
       path: "https://github.com/johnmiicheal/ojami",
-    },
-    {
-      img: "/images/work/hectrework.png",
-      title: "The Hectre",
-      caption: "Product designs for a property tech startup",
-      path: "https://thehectre.com",
     },
     {
       img: "/images/work/udcwork.png",
@@ -44,14 +50,14 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
     {
       img: "/images/work/greysswork.png",
       title: "Greynote Studio",
-      caption: "Comprehensive dashboard for Content Creators and Tutors",
+      caption: "Comprehensive dashboard for Content Creators and Tutors on Greynote",
       path: "https://www.youtube.com/@GreynoteLimited/videos",
     },
     {
-      img: "/images/work/lmwork.png",
-      title: "Lecture Mate AI",
-      caption: "Exam Prep and Study AI Buddy for Students",
-      path: "https://github.com/johnmiicheal/lecturemate",
+      img: "/images/work/tabetwork.png",
+      title: "Tabetai",
+      caption: "AI Agent for Cooking Recipes and Food Planner",
+      path: "https://trytabetai.vercel.app",
     },
     {
       img: "/images/work/chiwork.png",
@@ -62,14 +68,8 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
     {
       img: "/images/work/greywork-sm.png",
       title: "The Greynote Project",
-      caption: "The everything portal for K-12 education",
+      caption: "The simplified digital assistant for K-12 education",
       path: "https://greynote.app",
-    },
-    {
-      img: "/images/work/prjowork.png",
-      title: "Project One S&R",
-      caption: "Landing Page for Project One Agency",
-      path: "https://projectosr.vercel.app",
     },
     {
       img: "/images/work/zcampwork.png",
