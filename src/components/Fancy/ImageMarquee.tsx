@@ -29,8 +29,9 @@ export const ImageMarquee: React.FC<ImageMarqueeProps> = ({ images, bgColor, bor
       w={{ lg: "full" }}
       overflow="hidden"
       bg={bgColor}
+      zIndex={0}
     >
-      <Flex mt={-8} zIndex={2}>
+      <Flex mt={-8} >
         <Marquee speed={20}>
           <Flex minH="10em">
             {images.slice(10,19).map((p, index) => (

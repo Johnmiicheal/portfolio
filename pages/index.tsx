@@ -15,7 +15,6 @@ import { Projects } from "../src/components/Projects";
 import Snowfall from "react-snowfall";
 
 const Home = () => {
-
   const color = useColorModeValue("blackAlpha.400", "gray.500");
   const bgColor = useColorModeValue("#f2f2f2", "gray.900");
   const border = useColorModeValue("1px solid #e2e2e2", "1px solid #333");
@@ -27,7 +26,6 @@ const Home = () => {
     }, 3000);
   }, []);
 
-  const router = useRouter();
   return (
     <AnimatePresence>
       <Snowfall color="#00000020" />
@@ -38,7 +36,7 @@ const Home = () => {
         transition={{ duration: 2, delay: 6.5 }}
       >
         <Center
-          bg={'#f2f2f2'}
+          bg={"#f2f2f2"}
           bgSize="cover"
           bgPos="center"
           bgImg="/sakura-bg-2.png"
@@ -58,6 +56,18 @@ const Home = () => {
             <Projects bgColor={bgColor} color={color} border={border} />
           </Flex>
         </Center>
+        <Flex
+          bgImg="/paper-texture.png"
+          mixBlendMode={"hard-light"}
+          opacity={0.6}
+          bgAttachment={"fixed"}
+          w="full"
+          h="full"
+          position="absolute"
+          inset={0}
+          pointerEvents={"none"}
+          overflow="hidden"
+        ></Flex>
       </motion.div>
     </AnimatePresence>
   );

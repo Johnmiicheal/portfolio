@@ -127,8 +127,8 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
           <Text mt={5} fontStyle={"italic"} fontWeight={300} color="#696969">
             I design and develop web and mobile applications. I convert concepts
             and ideas into high-fidelity interfaces🎨. Currently, I work as
-            a Senior Software Engineer at{" "}
-            <Link href="https://www.greynote.app" target="_blank">
+            a Software Engineer at{" "}
+            <Link href="https://www.greynote.app" bg="#F4B95F" color="white" target="_blank">
               Greynote
             </Link>{" "}
             still available for freelance & contract jobs👨‍💻
@@ -159,7 +159,7 @@ export const About: React.FC<AboutProps> = ({ bgColor, border, color }) => {
           >
             <Text fontSize={12}>Current Role</Text>
             <Text fontSize={24} fontWeight={600}>
-              Lead Software Eng.
+              Software Eng.
             </Text>
           </Flex>
           <Flex gap={2} align="center" justify={"space-between"}>

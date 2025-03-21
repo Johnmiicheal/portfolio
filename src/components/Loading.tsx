@@ -9,7 +9,7 @@ export const Loading = () => {
       transition={{ duration: 3 }}
       exit={{ opacity: 0 }}
     >
-      <Center bg="#FAF4E9" h="100vh">
+      <Center bg="#FAF4E9" h="100vh" overflow="hidden">
         <Flex direction="column">
           <Image src={"/assets/jm-svg.svg"} alt="johnmiicheal" className="test" sx={{ animation: 'squiggly-anim 0.34s linear infinite',}} />
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'none' }}>
@@ -78,6 +78,17 @@ export const Loading = () => {
           </Flex>
         </Flex>
       </Center>
+      <Flex
+          bgImg="/paper-texture.png"
+          mixBlendMode={"hard-light"}
+          opacity={0.6}
+          bgRepeat={"repeat"}
+          w="full"
+          h="full"
+          position="absolute"
+          inset={0}
+          pointerEvents={"none"}
+        ></Flex>
     </motion.div>
   );
 };
