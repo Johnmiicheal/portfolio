@@ -10,19 +10,38 @@ import {
   Text,
   Button,
   useColorModeValue,
+  Icon,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { RiMailAiLine } from "react-icons/ri";
 
-interface ProjectPageProps {
-  bgColor: string;
-  border: string;
-  color: string;
-}
-
-export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color }) => {
-  const bgWhite = "#fff"
+export const Projects = () => {
 
   const projects = [
+    {
+      img: "/images/work/flowwork.png",
+      title: "Flowdeck",
+      caption: "AI Agent for appointment based businesses",
+      path: "https://github.com/johnmiicheal",
+    },
+    {
+      img: "/images/work/airwork.png",
+      title: "AI Rankia",
+      caption: "AI-powered SEO tool for content creators and marketers",
+      path: "https://airankia.com",
+    },
+    {
+      img: "/images/work/greywork-sm.png",
+      title: "Greynote Platform",
+      caption: "Web application for K-12 academic and content management",
+      path: "https://greynote.app",
+    },
+    {
+      img: "/images/work/ojami.gif",
+      title: "Ojà mi",
+      caption: "Digital marketplace powered by Kora Payments",
+      path: "https://github.com/johnmiicheal/ojami",
+    },
     {
       img: "/images/work/nestwork.png",
       title: "Nest App",
@@ -31,16 +50,11 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
     },
     {
       img: "/images/work/langwork.png",
-      title: "Lang Games",
+      title: "Rive Animations",
       caption: "2D Illustration + Animations",
       path: "https://langgames.vercel.app",
     },
-    {
-      img: "/images/work/ojami.gif",
-      title: "Ojà mi",
-      caption: "Digital marketplace powered by Kora Payments",
-      path: "https://github.com/johnmiicheal/ojami",
-    },
+   
     {
       img: "/images/work/udcwork.png",
       title: "Untitled Designers Conference 2024",
@@ -59,24 +73,8 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
       caption: "AI Agent for Cooking Recipes and Food Planner",
       path: "https://trytabetai.vercel.app",
     },
-    {
-      img: "/images/work/chiwork.png",
-      title: "Chipay by Chimoney",
-      caption: "Fintech Dashboard for Chimoney",
-      path: "https://chiprime.vercel.app",
-    },
-    {
-      img: "/images/work/greywork-sm.png",
-      title: "The Greynote Project",
-      caption: "The simplified digital assistant for K-12 education",
-      path: "https://greynote.app",
-    },
-    {
-      img: "/images/work/zcampwork.png",
-      title: "ZCAMP Network",
-      caption: "A Student hub with Reddit-like features",
-      path: "https://github.com/zcamp-inc",
-    },
+   
+   
     {
       img: "/images/work/qpswork.png",
       title: "Quasar Payment System",
@@ -98,38 +96,38 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
           <Card
             key={index}
             rounded={"20px"}
-            border={border}
-            bg={bgWhite}
+            border={"1px solid #45454570"}
+            bg={"#00000080"}
             boxShadow="none"
             cursor="pointer"
             _hover={{ "& img": { transform: "rotate(-2deg)" } }}
             onClick={() => window.open(item.path)}
           >
-            <CardBody>
-              <Stack spacing="2">
-                <Heading size="md">{item.title}</Heading>
+            <CardBody display="flex" flexDirection="column" h="full">
+              <Stack spacing="2" mb={3}>
+                <Heading size="md" color="#AAA">{item.title}</Heading>
                 <Text color="#747474" fontWeight={400}>
                   {item.caption}
                 </Text>
               </Stack>
               <Image
-                mt={5}
+                mt="auto"
                 src={item.img}
                 alt={item.title}
                 borderRadius="lg"
-                h="280px"
+                h="380px"
                 objectFit={"cover"}
                 objectPosition={"top"}
                 w="full"
                 transition="transform 0.8s ease"
                 pointerEvents={"none"}
-                border={border}
+                border={"1px solid #45454570"}
               />
             </CardBody>
           </Card>
         ))}
       </SimpleGrid>
-      <Box w="full" border={border} bg={bgWhite} overflow="hidden" rounded="20px">
+      <Box w="full" border={"1px solid #45454570"} bg={"#00000080"} overflow="hidden" rounded="20px">
         <Flex p={5} justify="space-between" align="center" w="full">
           <Text color="#747474">Let's build something cool, together</Text>
         <Box>
@@ -140,9 +138,9 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
               <Button
                 w="fit-content"
                 color={"#747474"}
-                bg={bgColor}
-                border={border}
-                _hover={{ bg: "#e2e2e2"}}
+                  bg={"#00000080"}
+                border={"1px solid #45454570"}
+                _hover={{ bg: "pink.700", color: "white" }}
                 fontWeight={300}
                 py={5}
                 rounded="20px"
@@ -152,6 +150,7 @@ export const Projects: React.FC<ProjectPageProps> = ({ border, bgColor, color })
                   )
                 }
               >
+                <Icon as={RiMailAiLine} mr={2} />
                 michealelijah301@gmail.com
               </Button>
             </motion.button>
