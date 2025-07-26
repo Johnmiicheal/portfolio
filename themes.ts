@@ -23,6 +23,9 @@ const theme = extendTheme({
   config,
   fonts: { heading: "Geist Sans", body: "Geist Sans" },
   styles: {
+    body: {
+      bg: "#0f0f0f",
+    },
     global: {
       "@keyframes wiggle": {
         "0%, 7%": {

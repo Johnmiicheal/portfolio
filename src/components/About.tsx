@@ -10,6 +10,7 @@ import {
   useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { ImageMarquee } from "./Fancy/ImageMarquee";
 import {
   RiBehanceFill,
@@ -37,6 +38,71 @@ export const About = () => {
     onOpen: onFileOpen,
     onClose: onFileClose,
   } = useDisclosure();
+
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut", delay: 1.5 }
+    }
+  };
+
+  const fadeInDown = {
+    hidden: { opacity: 0, y: -30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut", delay: 1.5 }
+    }
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut", delay: 1.5 }
+    }
+  };
+
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut", delay: 1.5 }
+    }
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut", delay: 1.5 }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 1.7,
+      }
+    }
+  };
+
+  const staggerItem = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
   const images = [];
   for (let i = 1; i <= 20; i++) {
     images.push(`/images/carousel/${i}.png`);
@@ -114,23 +180,37 @@ export const About = () => {
   return (
     <Stack>
       <Flex direction={"column"} gap={12} align="center">
-        <Flex direction="column" maxW={"680px"}>
-          <Text fontSize={22} fontFamily={"Instrument Serif"} color={"#fff"}>
-            <em>Hello,</em> I'm Johnmicheal{" "}
-            <Text display={"inline"} color="#acacac">
-              /ˈdʒɒn ˈmaɪkəl/
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+          <Flex direction="column" maxW={"680px"}>
+            <Text fontSize={22} fontFamily={"Instrument Serif"} color={"#fff"}>
+              <em>Hello,</em> I'm Johnmicheal{" "}
+              <Text display={"inline"} color="#acacac">
+                /ˈdʒɒn ˈmaɪkəl/
+              </Text>
             </Text>
-          </Text>
-          <Flex gap={3} mb={5} align="center" justify="start" w="full">
-            {schemes.map((scheme) => (
-              <Flex
-                key={scheme.label}
-                // w="full"
-                align="center"
-                cursor="pointer"
-                transition="all 0.3s"
-                role="group"
-              >
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={staggerContainer}
+          >
+            <Flex gap={3} mb={5} align="center" justify="start" w="full">
+              {schemes.map((scheme) => (
+                <motion.div
+                  key={scheme.label}
+                  variants={staggerItem}
+                >
+                  <Flex
+                    align="center"
+                    cursor="pointer"
+                    transition="all 0.3s"
+                    role="group"
+                  >
                 <Text
                   fontSize="sm"
                   fontWeight="semibold"
@@ -153,9 +233,11 @@ export const About = () => {
                     animation: scheme.animation,
                   }}
                 />
-              </Flex>
+                </Flex>
+              </motion.div>
             ))}
           </Flex>
+          </motion.div>
 
          
 
@@ -197,17 +279,23 @@ export const About = () => {
             freelance & contract jobs👨‍💻
           </Text>
         </Flex>
+        </motion.div>
         <Flex my={"100px"} justify="center">
-          <Flex
-            w="300px"
-            direction="column"
-            border={"1px solid #45454570"}
-            p={2}
-            bg={"black"}
-            _hover={{ mt: "-5px" }}
-            transition="all 0.3s ease"
-            transform="rotate(12deg)"
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={slideInLeft}
           >
+            <Flex
+              w="300px"
+              direction="column"
+              border={"1px solid #45454570"}
+              p={2}
+              bg={"black"}
+              transition="all 0.3s ease"
+              transform="rotate(12deg)"
+            >
             <Image
               className="img"
               src="/images/me.png"
@@ -222,16 +310,23 @@ export const About = () => {
               <Image src="/assets/barcode.svg" pointerEvents={"none"} />
             </Flex>
           </Flex>
-          <Flex
-            w="300px"
-            direction="column"
-            border={"1px solid #45454570"}
-            p={2}
-            bg={"black"}
-            _hover={{ mt: "-5px" }}
-            transition="all 0.3s ease"
-            transform="rotate(-5deg) translate(-60px, -70px)"
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={slideInRight}
+            style={{ marginLeft: '-60px', marginTop: '-70px' }}
           >
+            <Flex
+              w="300px"
+              direction="column"
+              border={"1px solid #45454570"}
+              p={2}
+              bg={"black"}
+              transition="all 0.3s ease"
+              transform="rotate(-5deg)"
+            >
             <Image
               className="img"
               src="/images/udc.png"
@@ -246,10 +341,17 @@ export const About = () => {
               <Image src="/assets/barcode.svg" pointerEvents={"none"} />
             </Flex>
           </Flex>
+          </motion.div>
         </Flex>
       </Flex>
 
-      <Flex direction={"column"} gap={4} align="center" w="full" mt={10}>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        <Flex direction={"column"} gap={4} align="center" w="full" mt={10}>
             <Stack w={"full"} direction="row">
               <Flex
                 px={3}
@@ -311,13 +413,20 @@ export const About = () => {
               </Flex>
             </Stack>
           </Flex>
+      </motion.div>
 
-      <Box
-        w="full"
-        border={"1px solid #45454570"}
-        overflow="hidden"
-        rounded="20px"
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
       >
+        <Box
+          w="full"
+          border={"1px solid #45454570"}
+          overflow="hidden"
+          rounded="20px"
+        >
         <Flex
           bg="#00000080"
           p={1}
@@ -337,11 +446,14 @@ export const About = () => {
           px={[2, 3, 14]}
         >
           {powers.map((item, index) => (
-            <Flex
+            <motion.div
               key={index}
-              direction="column"
-              align="center"
-              gap={3}
+              variants={staggerItem}
+            >
+              <Flex
+                direction="column"
+                align="center"
+                gap={3}
               _hover={{
                 "& .light": {
                   boxShadow: `
@@ -380,10 +492,12 @@ export const About = () => {
                 <Icon as={item.icon} fontSize={[14, 15, 24]} color="#747474" />
               </Flex>
                 <Text fontSize={12} mt={-1} color="#747474" opacity={0} transition="all 0.3s ease" className="icon-name">{item.name}</Text>
-            </Flex>
+              </Flex>
+            </motion.div>
           ))}
         </Flex>
       </Box>
+      </motion.div>
     </Stack>
   );
 };

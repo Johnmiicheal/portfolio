@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Center,
   Flex,
+  Text,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -10,7 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Loading } from "../src/components/Loading";
 import { About } from "../src/components/About";
 import { Projects } from "../src/components/Projects";
-import Snowfall from "react-snowfall";
+import { JMItems } from "../src/components/Footer";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,11 +24,11 @@ const Home = () => {
 
   return (
     <AnimatePresence>
-      {/* <AnimatePresence>{isLoading && <Loading />}</AnimatePresence> */}
+      <AnimatePresence>{isLoading && <Loading />}</AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        // transition={{ duration: 2, delay: 6.5 }}
+        transition={{ duration: 2, delay: 6.5 }}
       >
         <Center
           bg={"#0f0f0f"}
@@ -39,12 +40,27 @@ const Home = () => {
             gap={5}
             mt={{ base: 0, lg: 20 }}
             px={{ base: 2, lg: 4 }}
-            py={10}
+            pt={10}
           >
             <About />
             <Projects />
+            <Flex
+              justify="space-between"
+              align="center"
+              w="full"
+              mt={10}
+              color="#74747480"
+            >
+              <Text>Copyright © 2025 Johnmicheal Elijah</Text>
+              <Text>{"</"} For Humans, ♥︎ Robots{">"}</Text>
+            </Flex>
+            <Flex justify="center" align="start" w="full" h="300px" overflow="hidden">
+              <JMItems width="1920" height="500" />
+            </Flex>
           </Flex>
+          
         </Center>
+        
         <Flex
           bgImg="/paper-texture.png"
           mixBlendMode={"hard-light"}
