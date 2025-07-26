@@ -267,7 +267,7 @@ export const About = () => {
             <br />
             <br />
             When I’m not coding, I’m watching
-            <Link href="/my-anime-list" color="pink.300" target="_blank">
+            <Link href="https://myanimelist.net/profile/neopnk" target="_blank" color="pink.300">
               {" "}
               anime
             </Link>
