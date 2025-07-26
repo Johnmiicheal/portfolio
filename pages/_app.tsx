@@ -254,6 +254,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             name="skills"
             content="React,Next.js,TypeScript,JavaScript,Python,Node.js,GraphQL,PostgreSQL,Figma,AI/ML,Multi-agent Systems"
           />
+          <meta name="og:image" content="/jm-seo.png" />
 
           {/* Canonical and Alternate URLs */}
           <link rel="canonical" href="https://johnmicheal.xyz/" />
