@@ -31,8 +31,8 @@ export const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.6,
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
       },
     },
   };
@@ -124,7 +124,7 @@ export const Projects = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={staggerContainer}
         style={{ width: "100%" }}
       >

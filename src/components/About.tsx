@@ -199,7 +199,14 @@ export const About = () => {
             viewport={{ once: true, amount: 0.5 }}
             variants={staggerContainer}
           >
-            <Flex gap={3} mb={5} align="center" justify="start" w="full">
+            <Flex 
+              gap={{ base: 2, md: 3 }} 
+              mb={5} 
+              align="center" 
+              justify="start" 
+              w="full"
+              wrap="wrap"
+            >
               {schemes.map((scheme) => (
                 <motion.div
                   key={scheme.label}
@@ -212,7 +219,7 @@ export const About = () => {
                     role="group"
                   >
                 <Text
-                  fontSize="sm"
+                  fontSize={{ base: "xs", md: "sm" }}
                   fontWeight="semibold"
                   color="#aaa"
                   zIndex={2}
@@ -222,8 +229,8 @@ export const About = () => {
                 <Image
                   src={scheme.icon}
                   alt={scheme.label}
-                  width={6}
-                  height={6}
+                  width={{ base: 5, md: 6 }}
+                  height={{ base: 5, md: 6 }}
                   draggable={false}
                   ml={-2}
                   // zIndex={-2}
@@ -288,7 +295,7 @@ export const About = () => {
             variants={slideInLeft}
           >
             <Flex
-              w="300px"
+              w={["200px", "250px", "300px"]}
               direction="column"
               border={"1px solid #45454570"}
               p={2}
@@ -300,7 +307,7 @@ export const About = () => {
               className="img"
               src="/images/me.png"
               alt="image of johnmiicheal"
-              h={"300px"}
+              h={["200px", "250px", "300px"]}
               pointerEvents={"none"}
               objectFit={"cover"}
               transition="transform 1.1s ease"
@@ -319,7 +326,7 @@ export const About = () => {
             style={{ marginLeft: '-60px', marginTop: '-70px' }}
           >
             <Flex
-              w="300px"
+              w={["200px", "250px", "300px"]}
               direction="column"
               border={"1px solid #45454570"}
               p={2}
@@ -331,7 +338,7 @@ export const About = () => {
               className="img"
               src="/images/udc.png"
               alt="image of johnmiicheal"
-              h={"300px"}
+              h={["200px", "250px", "300px"]}
               pointerEvents={"none"}
               objectFit={"cover"}
               transition="transform 1.1s ease"
@@ -352,7 +359,7 @@ export const About = () => {
         variants={fadeInUp}
       >
         <Flex direction={"column"} gap={4} align="center" w="full" mt={10}>
-            <Stack w={"full"} direction="row">
+            <Stack w={"full"} direction={{ base: "column", md: "row" }} gap={4}>
               <Flex
                 px={3}
                 color="#AAA"
@@ -439,11 +446,30 @@ export const About = () => {
         </Flex>
         <Flex
           w="full"
-          justify="space-between"
+          justify={{ base: "flex-start", md: "space-between" }}
+          overflowX={{ base: "auto", md: "visible" }}
+          gap={{ base: 4, md: 0 }}
           borderTop={"1px solid #45454570"}
           bg={"#00000080"}
           py={5}
           px={[2, 3, 14]}
+          css={{
+            '@media (max-width: 48em)': {
+              '&::-webkit-scrollbar': {
+                height: '4px',
+              },
+              '&::-webkit-scrollbar-track': {
+                background: 'transparent',
+              },
+              '&::-webkit-scrollbar-thumb': {
+                background: '#45454570',
+                borderRadius: '4px',
+              },
+              '&::-webkit-scrollbar-thumb:hover': {
+                background: '#FFC4F9',
+              },
+            }
+          }}
         >
           {powers.map((item, index) => (
             <motion.div
@@ -454,6 +480,7 @@ export const About = () => {
                 direction="column"
                 align="center"
                 gap={3}
+                flexShrink={{ base: 0, md: 1 }}
               _hover={{
                 "& .light": {
                   boxShadow: `
@@ -481,13 +508,20 @@ export const About = () => {
                 align="center"
                 justify="center"
                 direction="column"
-                w={["30px", "40px", "60px"]}
+                w={"60px"}
                 h={"60px"}
                 bg="#00000080"
                 rounded="10px"
-                transition="transform 0.3s ease-in-out"
+                _hover={{ rounded: "30px" }}
+                _focus={{ outline: "none" }}
+                _active={{ outline: "none" }}
+                transition="all 0.3s ease-in-out"
                 transformOrigin="center"
                 border={"1px solid #45454570"}
+                css={{
+                  WebkitTapHighlightColor: "transparent",
+                  outline: "none",
+                }}
               >
                 <Icon as={item.icon} fontSize={[14, 15, 24]} color="#747474" />
               </Flex>

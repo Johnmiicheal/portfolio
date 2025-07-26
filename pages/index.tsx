@@ -39,7 +39,7 @@ const Home = () => {
             w={{ base: "full", sm: "460px", md: "768px", lg: "980px" }}
             gap={5}
             mt={{ base: 0, lg: 20 }}
-            px={{ base: 2, lg: 4 }}
+            px={{ base: 4, lg: 4 }}
             pt={10}
           >
             <About />
