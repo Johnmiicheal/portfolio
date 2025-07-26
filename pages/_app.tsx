@@ -71,8 +71,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/jm-seo.png",
-        width: 1007.08,
-        height: 566.48,
         alt: "Johnmicheal Elijah - AI Engineer and Full-Stack Developer Portfolio",
       },
     ],
