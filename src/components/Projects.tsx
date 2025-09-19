@@ -48,16 +48,22 @@ export const Projects = () => {
 
   const projects = [
     {
+      img: "/images/work/brazework.png",
+      title: "Braze AI",
+      caption: "Coding Agent to automatically fix merge conflicts",
+      path: "https://braze.dev",
+    },
+    {
       img: "/images/work/flowwork.png",
       title: "Flowdeck",
       caption: "AI Agent for appointment based businesses",
-      path: "https://github.com/johnmiicheal",
+      path: "https://youtu.be/1ig6yIGrrb8",
     },
     {
       img: "/images/work/airwork.png",
-      title: "AI Rankia",
-      caption: "AI-powered SEO tool for content creators and marketers",
-      path: "https://airankia.com",
+      title: "BrandScope (AI Rankia)",
+      caption: "Brand Perception Analysis tool for businesses using AI Search Engines",
+      path: "https://brandscope.vercel.app",
     },
     {
       img: "/images/work/greywork-sm.png",
@@ -69,8 +75,14 @@ export const Projects = () => {
       img: "/images/work/greysswork.png",
       title: "Greynote Studio",
       caption:
-        "Comprehensive dashboard for Content Creators and Tutors on Greynote",
+        "Comprehensive dashboard for Tutors on Greynote",
       path: "https://www.youtube.com/@GreynoteLimited/videos",
+    },
+    {
+      img: "/images/work/whopwork.png",
+      title: "Whop Wins by Siya",
+      caption: "Redesign of Whop Wins. Over 16k users",
+      path: "https://whop.com/apps/app_GZakxXgrbGBb8s/",
     },
     {
       img: "/images/work/ojami.gif",

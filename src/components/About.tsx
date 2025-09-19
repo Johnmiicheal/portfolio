@@ -109,7 +109,7 @@ export const About = () => {
   }
   const links = [
     {
-      path: () => window.open("/assets/01_Johnmicheal_Elijah_Resume_2025_JUN_UPDATE_.pdf"),
+      path: () => window.open("/assets/01_Johnmicheal_Elijah_Resume_2025_SEPT_UPDATE.pdf"),
       text: "Resume",
       icon: VscFilePdf,
     },
@@ -262,28 +262,22 @@ export const About = () => {
             Most developers ignore design. Most designers avoid code. I live in
             the middle, turning rough ideas into production-ready web and mobile
             apps that users actually enjoy using. Right now, I’m building
-            multi-agent AI systems as a Founding Engineer at{" "}
+            multi-agent AI systems as a Fullstack Engineer at{" "}
             <Link
-              href="https://www.airankia.com"
-              color="purple.300"
+              href="https://www.heylua.ai"
+              color="pink.300"
               target="_blank"
             >
-              AI Rankia
+              Lua AI (YC W25)
             </Link>{" "}
-            , but I’m still open to freelance and contract work.
+            , part-ime while also studying for my Masters in Software Engineering at Nottingham Trent University.
             <br />
             <br />
-            When I’m not coding, I’m watching
+            When I’m not coding, I’m watching{" "}
             <Link href="https://myanimelist.net/profile/neopnk" target="_blank" color="pink.300">
-              {" "}
               anime
             </Link>
-            , yelling at Liverpool matches, or grinding through games with a cup
-            of coffee in one hand and a Red Bull in the other.
-            <br />
-            <br />
-            Let’s build something that actually works. still available for
-            freelance & contract jobs👨‍💻
+            , enjoying Mo Salah, Isak and the rest of the boys play for Liverpool, or breaking my controller on EA FC and NBA 2K.
           </Text>
         </Flex>
         </motion.div>
