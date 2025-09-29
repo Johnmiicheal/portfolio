@@ -261,16 +261,10 @@ export const About = () => {
             <br />
             Most developers ignore design. Most designers avoid code. I live in
             the middle, turning rough ideas into production-ready web and mobile
-            apps that users actually enjoy using. Right now, I’m building
-            multi-agent AI systems as a Fullstack Engineer at{" "}
-            <Link
-              href="https://www.heylua.ai"
-              color="pink.300"
-              target="_blank"
-            >
-              Lua AI (YC W25)
-            </Link>{" "}
-            , part-ime while also studying for my Masters in Software Engineering at Nottingham Trent University.
+            apps that users actually enjoy using. Right now, I’m studying for my Masters in Software Engineering at 
+            <Link href="https://www.ntu.ac.uk" color="pink.300" target="_blank">
+              Nottingham Trent University
+            </Link>.
             <br />
             <br />
             When I’m not coding, I’m watching{" "}

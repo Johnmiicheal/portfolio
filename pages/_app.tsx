@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Johnmicheal Elijah - AI Engineer & Full-Stack Developer",
   description:
-    "Founding AI Engineer at AI Rankia building multi-agent systems. Expert full-stack developer specializing in React, Next.js, TypeScript.",
+    "Founding AI Engineer building multi-agent systems. Expert full-stack developer specializing in React, Next.js, TypeScript.",
   generator: "Next.js",
   applicationName: "Johnmicheal Elijah Portfolio",
   keywords: [
@@ -60,12 +60,19 @@ export const metadata: Metadata = {
     "Cloud Solutions",
     "Agile Development",
     "Technical Leadership",
+    "YCombinator",
+    "Startup Engineer",
+    "Tech Consultant",
+    "Figma Expert",
+    "Node.js Developer",
+    "PostgreSQL Expert",
+    "Modern Web Interfaces",
   ],
   colorScheme: "dark",
   openGraph: {
     title: "Johnmicheal Elijah - AI Engineer & Full-Stack Developer",
     description:
-      "Founding AI Engineer building multi-agent systems at AI Rankia. Expert in React, Next.js, TypeScript with Masters in Software Engineering from NTU.",
+      "Founding AI Engineer building multi-agent systems. Expert in React, Next.js, TypeScript with Masters in Software Engineering from NTU.",
     url: "https://johnmicheal.xyz/",
     siteName: "Johnmicheal Elijah Portfolio",
     images: [
@@ -81,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Johnmicheal Elijah - AI Engineer & Full-Stack Developer",
     description:
-      "Founding AI Engineer at AI Rankia 🤖 Building multi-agent systems & modern web interfaces with React, Next.js & TypeScript.",
+      "Founding AI Engineer 🤖 Building multi-agent systems & modern web interfaces with React, Next.js & TypeScript.",
     creator: "@johnmiiiicheal",
     images: ["/jm-seo.png"],
   },
@@ -192,7 +199,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="copyright" content="Johnmicheal Elijah" />
           <meta
             name="abstract"
-            content="Founding AI Engineer at AI Rankia specializing in multi-agent systems, React, Next.js, and TypeScript development."
+            content="Founding AI Engineer specializing in multi-agent systems, React, Next.js, and TypeScript development."
           />
           <meta
             name="topic"
@@ -246,7 +253,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
           <meta
             name="current-role"
-            content="Founding AI Engineer at AI Rankia"
+            content="Founding AI Engineer"
           />
           <meta
             name="skills"
@@ -281,7 +288,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 name: "Johnmicheal Elijah",
                 jobTitle: "AI Engineer & Full-Stack Developer",
                 description:
-                  "Founding AI Engineer at AI Rankia building multi-agent systems. Expert full-stack developer specializing in React, Next.js, TypeScript.",
+                  "Founding AI Engineer building multi-agent systems. Expert full-stack developer specializing in React, Next.js, TypeScript.",
                 url: "https://johnmicheal.xyz",
                 sameAs: [
                   "https://github.com/johnmiicheal",
@@ -289,11 +296,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                   "https://twitter.com/johnmiiiicheal",
                   "https://behance.net/johnmiicheal",
                 ],
-                worksFor: {
-                  "@type": "Organization",
-                  name: "AI Rankia",
-                  url: "https://www.airankia.com",
-                },
+                // worksFor: {
+                //   "@type": "Organization",
+                //   name: "AI Rankia",
+                //   url: "https://www.airankia.com",
+                // },
                 alumniOf: [
                   {
                     "@type": "EducationalOrganization",
@@ -391,7 +398,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   "Technical Consulting",
                 ],
                 url: "https://johnmicheal.xyz",
-                telephone: "+234-XXX-XXX-XXXX",
+                telephone: "+44-XXX-XXX-XXXX",
                 email: "hello@johnmicheal.xyz",
               }),
             }}
