@@ -22,13 +22,13 @@ const Home = () => {
     }, 3000);
   }, []);
 
-  return (
-    <AnimatePresence>
-      <AnimatePresence>{isLoading && <Loading />}</AnimatePresence>
+  let page = null;
+  if (!isLoading) {
+    page = (
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2, delay: 6.5 }}
+        transition={{ duration: 2, delay: 3 }}
       >
         <Center
           bg={"#0f0f0f"}
@@ -74,6 +74,12 @@ const Home = () => {
           overflow="hidden"
         ></Flex>
       </motion.div>
+    )
+  }
+  return (
+    <AnimatePresence>
+      <AnimatePresence>{isLoading && <Loading />}</AnimatePresence>
+      {page}
     </AnimatePresence>
   );
 };

@@ -91,6 +91,7 @@ export const About = () => {
       transition: {
         staggerChildren: 0.1,
         delayChildren: 1.7,
+        delay: 1.5,
       }
     }
   };
@@ -261,7 +262,7 @@ export const About = () => {
             <br />
             Most developers ignore design. Most designers avoid code. I live in
             the middle, turning rough ideas into production-ready web and mobile
-            apps that users actually enjoy using. Right now, I’m studying for my Masters in Software Engineering at 
+            apps that users actually enjoy using. Right now, I’m studying for my Masters in Software Engineering at {" "}
             <Link href="https://www.ntu.ac.uk" color="pink.300" target="_blank">
               Nottingham Trent University
             </Link>.
@@ -321,18 +322,20 @@ export const About = () => {
               bg={"black"}
               transition="all 0.3s ease"
               transform="rotate(-5deg)"
+              position="relative"
             >
+              <Image src="/images/ntu-sticker.png" position="absolute" top={-5} right={-3} transform="rotate(24deg)" w="100px" draggable={false} />
             <Image
               className="img"
-              src="/images/udc.png"
-              alt="image of johnmiicheal"
+              src="/images/ntu.png"
+              alt="image of nottingham trent university"
               h={["200px", "250px", "300px"]}
               pointerEvents={"none"}
               objectFit={"cover"}
               transition="transform 1.1s ease"
             />
             <Flex w="full" justify="space-between" px={1} mt={6}>
-              <Image src="/assets/udc.svg" pointerEvents={"none"} />
+              <Image src="/assets/ntu.svg" pointerEvents={"none"} />
               <Image src="/assets/barcode.svg" pointerEvents={"none"} />
             </Flex>
           </Flex>
@@ -364,7 +367,7 @@ export const About = () => {
               >
                 <Text fontSize={12}>Current Role</Text>
                 <Text fontSize={24} fontWeight={600}>
-                  AI Engineer
+                  MSc Student
                 </Text>
               </Flex>
               <Flex gap={2} align="center">

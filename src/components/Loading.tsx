@@ -8,6 +8,7 @@ export const Loading = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 3 }}
       exit={{ opacity: 0 }}
+      style={{ height: "100vh" }}
     >
       <Center bg="#FAF4E9" h="100vh" overflow="hidden">
         <Flex direction="column" w="full" align="center" justify="start">
